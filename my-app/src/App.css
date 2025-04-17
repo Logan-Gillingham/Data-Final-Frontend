@@ -38,7 +38,7 @@ html, body {
 
 /* Add some spacing for the content below the fixed nav bar */
 main {
-  margin-top: 70px; /
+  margin-top: 70px; /* Fixed the invalid character */
 }
 
 /* Footer Styling */
@@ -61,5 +61,5 @@ main {
 }
 
 .App-footer a:hover {
-  text-decoration: underline; /
+  text-decoration: underline; /* Fixed the invalid character */
 }
