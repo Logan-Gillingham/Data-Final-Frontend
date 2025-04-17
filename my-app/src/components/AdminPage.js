@@ -18,37 +18,46 @@ const AdminPage = () => {
       originDestination: "Los Angeles (LAX)",
       gate: "B5",
       status: "Delayed"
-    },
-    {
-      id: 3,
-      flightNumber: "UA789",
-      airline: "United Airlines",
-      originDestination: "Chicago (ORD)",
-      gate: "C3",
-      status: "Boarding"
     }
   ]);
 
-  const handleUpdateStatus = (id, newStatus) => {
-    setFlights((prevFlights) =>
-      prevFlights.map((flight) =>
-        flight.id === id ? { ...flight, status: newStatus } : flight
-      )
+  // Function to handle status change
+  const handleStatusChange = (id, newStatus) => {
+    const updatedFlights = flights.map((flight) =>
+      flight.id === id ? { ...flight, status: newStatus } : flight
     );
+    setFlights(updatedFlights);
   };
 
   return (
     <div className="admin-page">
       <h1>Admin Page</h1>
-      <table>
+
+      {/* Add Flight Form */}
+      <form className="add-flight-form">
+        <h2>Add New Flight</h2>
+        <input type="text" placeholder="Flight Number" />
+        <input type="text" placeholder="Airline" />
+        <input type="text" placeholder="Origin/Destination" />
+        <input type="text" placeholder="Gate" />
+        <select>
+          <option value="">Select Status</option>
+          <option value="On Time">On Time</option>
+          <option value="Delayed">Delayed</option>
+          <option value="Boarding">Boarding</option>
+        </select>
+        <button type="submit">Add Flight</button>
+      </form>
+
+      {/* Flights Table */}
+      <table className="flights-table">
         <thead>
           <tr>
-            <th>Flight</th>
+            <th>Flight Number</th>
             <th>Airline</th>
             <th>Origin/Destination</th>
             <th>Gate</th>
             <th>Status</th>
-            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -58,23 +67,17 @@ const AdminPage = () => {
               <td>{flight.airline}</td>
               <td>{flight.originDestination}</td>
               <td>{flight.gate}</td>
-              <td>{flight.status}</td>
               <td>
-                <button
-                  onClick={() => handleUpdateStatus(flight.id, "On Time")}
+                <select
+                  value={flight.status}
+                  onChange={(e) =>
+                    handleStatusChange(flight.id, e.target.value)
+                  }
                 >
-                  On Time
-                </button>
-                <button
-                  onClick={() => handleUpdateStatus(flight.id, "Delayed")}
-                >
-                  Delayed
-                </button>
-                <button
-                  onClick={() => handleUpdateStatus(flight.id, "Cancelled")}
-                >
-                  Cancelled
-                </button>
+                  <option value="On Time">On Time</option>
+                  <option value="Delayed">Delayed</option>
+                  <option value="Boarding">Boarding</option>
+                </select>
               </td>
             </tr>
           ))}

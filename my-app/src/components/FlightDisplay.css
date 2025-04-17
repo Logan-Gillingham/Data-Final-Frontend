@@ -1,11 +1,12 @@
+/* Reset margin and padding for the entire page */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Roboto', Arial, sans-serif; /* Modern font */
-  background-color: #f4f4f9; /* Light background for better contrast */
-  color: #333; /* Neutral text color */
+  font-family: 'Roboto', Arial, sans-serif; 
+  background-color: #f4f4f9; 
+  color: #333; 
 }
 
 /* Header Navigation */
@@ -13,9 +14,9 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, Teal, teal); /* Gradient background */
+  background: linear-gradient(90deg, teal, teal); 
   color: white;
-  padding: 15px 40px; /* Increased padding for better spacing */
+  padding: 15px 40px; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -36,45 +37,45 @@ html, body {
 }
 
 .header-nav .nav-links a {
-    color: black; /* Change text color to black */
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s, transform 0.2s;
-  }
-  
-  .header-nav .nav-links a:hover {
-    color: black; /* Green hover effect for better contrast */
-    transform: scale(1.1); /* Slight zoom effect */
-  }
+  color: black; 
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.header-nav .nav-links a:hover {
+  color: black; 
+  transform: scale(1.1); 
+}
 
 /* Main Container */
 .flight-display-container {
-  margin-top: 80px; /* Adjusted for larger header */
+  padding-top: 70px; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('https://images.pexels.com/photos/62623/wing-plane-flying-airplane-62623.jpeg'); /* Replace with your image path */
+  background-image: url('https://images.pexels.com/photos/62623/wing-plane-flying-airplane-62623.jpeg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: calc(100vh - 70px); 
   width: 100%;
   color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); 
 }
 
 /* Main Content */
 .flight-display {
   width: 90%;
   max-width: 900px;
-  background: rgba(255, 255, 255, 0.95); /* Slightly more opaque background */
-  padding: 40px; /* Increased padding for better spacing */
-  border-radius: 20px; /* More rounded corners */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+  background: rgba(255, 255, 255, 0.95); 
+  padding: 40px; 
+  border-radius: 20px; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
-  backdrop-filter: blur(8px); /* Enhanced blur effect */
+  backdrop-filter: blur(8px); 
   border: 4px solid transparent;
   background-clip: padding-box;
   position: relative;
@@ -89,120 +90,121 @@ html, body {
   bottom: -4px;
   z-index: -1;
   background: linear-gradient(45deg, teal, teal);
-  border-radius: 24px; /* Match the border radius */
+  border-radius: 24px; 
 }
 
 /* Headings */
 .flight-display h1 {
   margin-bottom: 25px;
-  font-size: 2.8rem; /* Larger font size */
+  font-size: 2.8rem; 
   color: #333;
   text-transform: uppercase;
   letter-spacing: 3px;
-  border-bottom: 4px solid teal; /* Decorative underline */
+  border-bottom: 4px solid teal; 
   display: inline-block;
   padding-bottom: 8px;
 }
 
 /* Table */
 .flight-display table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 25px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border: 4px solid black; /* Black outer border explicitly defined */
-    background-color: black; /* Ensure the table background is white */
-    
-  }
-  
-  .flight-display th,
-  .flight-display td {
-    border: 2px solid teal; /* Green inner borders */
-    padding: 15px;
-    text-align: center;
-    color: #333; /* Neutral text color */
-  }
-  
-  .flight-display th {
-    background: linear-gradient(90deg, teal, TEAL); /* Gradient header */
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem; /* Slightly larger font size */
-    text-transform: uppercase;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-  }
-  
-  .flight-display tr:nth-child(odd) {
-    background-color: #f4f4f4; /* Light gray for odd rows */
-  }
-  
-  .flight-display tr:nth-child(even) {
-    background-color: #e8f5e9; /* Light green for even rows */
-  }
-  
-  .flight-display tr:hover {
-    background-color: #d7ffd9; /* Brighter green hover effect */
-    cursor: pointer;
-    transform: scale(1.02); /* Slight zoom effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
-  }
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 4px solid black; 
+  background-color: black; 
+}
 
-  .flight-display table {
-    animation: fadeIn 0.8s ease-in-out;
+.flight-display th,
+.flight-display td {
+  border: 2px solid teal; 
+  padding: 15px;
+  text-align: center;
+  color: #333; 
+}
+
+.flight-display th {
+  background: linear-gradient(90deg, teal, teal); 
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem; 
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.flight-display tr:nth-child(odd) {
+  background-color: #f4f4f4; 
+}
+
+.flight-display tr:nth-child(even) {
+  background-color: #e8f5e9; 
+}
+
+.flight-display tr:hover {
+  background-color: #d7ffd9; 
+  cursor: pointer;
+  transform: scale(1.02); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.flight-display table {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
 
 /* Footer */
+
 .flight-display-footer {
   margin-top: 30px;
   font-size: 0.9rem;
-  color: #555;
+  color: #000; 
   text-align: center;
+  font-weight: bold; 
+  text-shadow: none; 
 }
-
 .white-box {
-    display: inline-block;
-    background-color: white;
-    color: #333; /* Neutral text color for contrast */
-    padding: 20px 40px; /* Increased padding for a larger box */
-    border-radius: 12px; /* Slightly more rounded corners */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
-    font-size: 1.5rem; /* Larger font size */
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 20px 0; /* Increased spacing around the box */
-    width: 100%; /* Make it span the full width of its container */
-    max-width: 600px; /* Limit the maximum width */
-    border: black 4px solid; /* Black border for the box */
-    animation: fadeInBounce 1s ease-in-out; /* Add animation */
+  display: inline-block;
+  background-color: white;
+  color: #333; 
+  padding: 20px 40px; 
+  border-radius: 12px; 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+  font-size: 1.5rem; 
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 20px 0; 
+  width: 100%; 
+  max-width: 600px; 
+  border: black 4px solid;
+  animation: fadeInBounce 1s ease-in-out; 
 }
 
 /* Keyframes for the fade-in bounce effect */
 @keyframes fadeInBounce {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px); /* Start slightly above */
-    }
-    50% {
-        opacity: 0.5;
-        transform: translateY(10px); /* Bounce down */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Settle in place */
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); 
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
 }

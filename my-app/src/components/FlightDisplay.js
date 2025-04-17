@@ -33,15 +33,6 @@ const FlightDisplay = () => {
 
   return (
     <>
-      {/* Header Navigation */}
-      <header className="header-nav">
-        <div className="logo">Flight Tracker</div>
-        <nav className="nav-links">
-          <a href="#flight-tracker">Flight Tracker</a>
-          <a href="#admin-page">Admin Page</a>
-        </nav>
-      </header>
-
       {/* Main Content */}
       <div className="flight-display-container">
         <div className="flight-display">

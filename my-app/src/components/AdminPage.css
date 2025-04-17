@@ -1,53 +1,125 @@
 .admin-page {
   padding: 20px;
   font-family: 'Roboto', Arial, sans-serif;
+  background: url("https://media.istockphoto.com/id/155380716/photo/commercial-jet-flying-over-clouds.jpg?b=1&s=612x612&w=0&k=20&c=ckHvRMzInb8Ih2GwPYlnZcu9BMPZUwmGDBztrytDXXA=") no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: overlay; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  min-height: 100vh;
 }
 
 .admin-page h1 {
+  text-align: center;
+  color: #ffffff; 
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+.add-flight-form {
+  background: rgba(255, 255, 255, 0.9); 
+  padding: 30px; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.add-flight-form h2 {
   text-align: center;
   color: #333;
   margin-bottom: 20px;
 }
 
-.admin-page table {
+.add-flight-form input,
+.add-flight-form select {
+  width: calc(100% - 20px); 
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box; 
+}
+
+.add-flight-form input:focus,
+.add-flight-form select:focus {
+  outline: none;
+  border-color: teal;
+  box-shadow: 0 0 5px rgba(0, 128, 128, 0.5);
+}
+
+.add-flight-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: teal;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-flight-form button:hover {
+  background-color: #005f5f;
+  transform: scale(1.02);
+}
+
+.flights-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  background: rgba(255, 255, 255, 0.9); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.admin-page th,
-.admin-page td {
-  border: 2px solid #fbc02d; /* Yellow borders */
-  padding: 10px;
+.flights-table th,
+.flights-table td {
+  padding: 15px;
   text-align: center;
+  border: 1px solid #ddd;
 }
 
-.admin-page th {
-  background: linear-gradient(90deg, #fbc02d, #ffeb3b); /* Yellow gradient */
-  color: black;
-  font-weight: bold;
+.flights-table th {
+  background-color: teal;
+  color: white;
+  text-transform: uppercase;
 }
 
-.admin-page tr:nth-child(odd) {
-  background-color: #fffde7; /* Light yellow for odd rows */
+.flights-table tr:nth-child(odd) {
+  background-color: rgba(240, 240, 240, 0.9); 
 }
 
-.admin-page tr:nth-child(even) {
-  background-color: #fff9c4; /* Slightly darker yellow for even rows */
+.flights-table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-.admin-page button {
-  padding: 5px 10px;
-  margin: 0 5px;
-  background-color: #fbc02d;
-  border: none;
-  border-radius: 5px;
-  color: black;
-  font-weight: bold;
+.flights-table tr:hover {
+  background-color: rgba(224, 247, 250, 0.9); 
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-.admin-page button:hover {
-  background-color: #ffeb3b;
+/* Add styles for the dropdown in the table */
+.flights-table select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flights-table select:focus {
+  outline: none;
+  border-color: teal;
+  box-shadow: 0 0 5px rgba(0, 128, 128, 0.5);
+}
+
+.flights-table select:hover {
+  background-color: #f0f0f0;
 }
