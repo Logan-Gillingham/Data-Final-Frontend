@@ -1,0 +1,53 @@
+.admin-page {
+  padding: 20px;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.admin-page h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.admin-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin-page th,
+.admin-page td {
+  border: 2px solid #fbc02d; /* Yellow borders */
+  padding: 10px;
+  text-align: center;
+}
+
+.admin-page th {
+  background: linear-gradient(90deg, #fbc02d, #ffeb3b); /* Yellow gradient */
+  color: black;
+  font-weight: bold;
+}
+
+.admin-page tr:nth-child(odd) {
+  background-color: #fffde7; /* Light yellow for odd rows */
+}
+
+.admin-page tr:nth-child(even) {
+  background-color: #fff9c4; /* Slightly darker yellow for even rows */
+}
+
+.admin-page button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #fbc02d;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.admin-page button:hover {
+  background-color: #ffeb3b;
+}
